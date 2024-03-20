@@ -1,7 +1,7 @@
 "use client";
 
 import { useSession } from 'next-auth/react';
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Profile from '@components/Profile';
 
@@ -45,15 +45,13 @@ const MyProfile = () => {
   };
 
   return (
-    <Suspense>
-      <Profile 
-        name="My"
-        desc="Welcome to your personalized profile page"
-        data={posts}
-        handleDelete={handleDelete}
-        handleEdit={handleEdit}
-      />
-    </Suspense>
+    <Profile 
+      name="My"
+      desc="Welcome to your personalized profile page"
+      data={posts}
+      handleDelete={handleDelete}
+      handleEdit={handleEdit}
+    />
   )
 }
 

@@ -40,15 +40,15 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           <Link href="/" className='text-gray-500 text-sm'>
             Cancel
           </Link>
-        </div>
 
-        <button
-          type='submit'
-          disabled={submitting}
-          className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white"
-        >
-          {submitting ? `${type}...` : type}
-        </button>
+          <button
+            type='submit'
+            disabled={submitting}
+            className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white"
+          >
+            {submitting ? `${type}...` : type}
+          </button>
+        </div>
       </form>
     </section>
   )

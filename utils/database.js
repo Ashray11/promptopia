@@ -15,11 +15,11 @@ export const connectToDB = async () => {
             dbName: "share_prompt",
             useNewUrlParser: true,
             useUnifiedTopology: true,
-        })
+        });
 
         isConnected = true;
-        console.log("MongoDB connected.")
+        console.log("MongoDB connected.");
     } catch (error) {
         console.log(error);
     }
-}
+};

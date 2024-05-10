@@ -14,7 +14,7 @@ const MyProfile = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`api/users/${session?.user.id}/posts`);
+      const response = await fetch(`/api/users/${session?.user.id}/posts`);
       const data = await response.json();
       setPosts(data);
     }
@@ -47,7 +47,7 @@ const MyProfile = () => {
   return (
     <Profile 
       name="My"
-      desc="Welcome to your personalized profile page"
+      desc="Welcome to your personalized profile page."
       data={posts}
       handleDelete={handleDelete}
       handleEdit={handleEdit}
